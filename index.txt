@@ -1,0 +1,16 @@
+        const card = containerCard.cloneNode(true);
+        const name = document.getElementById("name");
+        const population = document.getElementById("population");
+        const capital = document.getElementById("capital");
+        const region = document.getElementById("region");
+        const img = document.getElementById("img");
+
+        img.src = pais.flag;
+        capital.textContent = `Capital: ${pais.capital}`;
+        name.textContent = pais.name;
+        population.textContent = `Population: ${pais.population}`;
+        region.textContent = `Region: ${pais.region}`;
+        templateCard.appendChild(card);
+        console.log(pais.name);
+        card.style.display = "flex";
+        return {name: pais.name, population:pais.population, region: pais.region, element: card}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="all">
+        <header>
+            <h1>Where in the world?</h1>
+            <p onclick="ChangeMode()" id="black"><img src="/491-IcoMoon.png" alt="" width="15px" height="15px">Dark Mode</p>
+            <p id="white"> White Mode</p>
+        </header>
+        <hr id="linea">
+    <div class="body">
+        <div class="inputs">
+        <input type="search" id="input" placeholder="search for a country" >
+        <select name="Continente" id="region">
+            <option selected>Filter By region</option>
+            <option id="Europe">Europe</option>
+            <option id="Africa">Africa</option>
+            <option id="Asia">Asia</option>
+            <option id="America">America</option>
+            <option id="Oceania">Oceania</option>
+            </select>
+        </div>
+        <div id="container" data-container>   
+        <template data-template>
+            <div id="card">
+                <img class="img" data-img alt="" src="">
+                <div class="name" data-name></div>
+                <div class="population"data-population></div>
+                <div class="region" data-region></div>
+                <div class="capital" data-capital></div>
+            </div>
+        </template>
+        </div>
+    </div>
+    <div class="pais">
+        <button type="button" id="Back">Back</button>
+        <div id="Pbody">
+        <img id="pImg" src="">
+            <div id="info">
+            <div id="info1">
+                <div id="Pname" data-name><b></b></div>
+                <div id="Pnative"><b></b></div>
+                <div id="pPopulation"><b></b></div>
+                <div id="Pregion"><b></b></div>
+                <div id="pSub"><b></b></div>
+                <div id="pCapital"><b></b></div>
+                <div id="borderCountries"><b></b><p></p></div>
+            </div>
+            <div id="info2">
+                <div id="pLevel"><b></b></div>
+                <div id="pCurrencies"><b></b></div>
+                <div id="Languages"><b></b></div>
+            </div>
+       
+        </div>
+        </div>
+    </div>
+    </section>
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
+<script>
+  var placesAutocomplete = places({
+    appId: 'YOUR_PLACES_APP_ID',
+    apiKey: 'YOUR_PLACES_API_KEY',
+    container: document.querySelector('#adress')
+  });
+</script>
+    <script src="codigo.js"></script>
+</body>
+</html>
